@@ -1,7 +1,6 @@
 import { Message, Icon, Divider } from 'semantic-ui-react'
-import { useRouter } from 'next/Router'
+import { useRouter } from 'next/router'
 import Link from 'next/link'
-
 
 export const HeaderMessage = () => {
   const router = useRouter()
@@ -13,11 +12,11 @@ export const HeaderMessage = () => {
       attached
       header={signupRoute ? 'Get started' : 'Welcome Back'}
       icon={signupRoute ? 'settings' : 'privacy'}
-      content={signupRoute ? 'Create New Account' : 'Login with Email and Password'}
-
+      content={
+        signupRoute ? 'Create New Account' : 'Login with Email and Password'
+      }
     />
   )
-
 }
 
 export const FooterMessage = () => {
@@ -42,13 +41,10 @@ export const FooterMessage = () => {
           </Message>
           <Message attached="bottom" warning>
             <Icon name="help" />
-            New User? <Link href="/signup">Signup Here</Link> Instead {" "}
+            New User? <Link href="/signup">Signup Here</Link> Instead{' '}
           </Message>
-
         </>
       )}
     </>
-
   )
-
 }
