@@ -9,8 +9,6 @@ const jwt = require('jsonwebtoken')
 const bcrypt = require('bcryptjs')
 const isEmail = require('validator/lib/isEmail')
 
-//dns0rmhlv
-
 router.get('/', authMiddleware, async (req, res) => {
   const { userId } = req
 
